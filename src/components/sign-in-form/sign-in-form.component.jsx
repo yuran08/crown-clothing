@@ -29,8 +29,9 @@ const SignInForm = () => {
   
   const signInWithGoogle = async () => {
     try {
-      const { userAuth } = await signInWithGooglePopup();
-      await createUserDocumentFromAuth(userAuth);
+      const { user } = await signInWithGooglePopup();
+      setCurrentUser(user);
+      createUserDocumentFromAuth(user);
     } catch (error) {
       switch (error.code) {
         case 'auth/popup-closed-by-user':
