@@ -6,7 +6,7 @@ import {
  } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
 import './sign-in-form.style.scss';
 
@@ -100,8 +100,8 @@ const SignInForm = () => {
         />
 
         <div className="buttons-container">
-          <Button type="submit" children="Sign in"/>
-          <Button type="button" buttonType="google" onClick={signInWithGoogle} children="Google sign in"/>
+          <Button children="Sign in"/>
+          <Button buttonType={BUTTON_TYPE_CLASSES.google} onClick={signInWithGoogle} children="Google sign in"/>
         </div>
       </form>
     </div>
