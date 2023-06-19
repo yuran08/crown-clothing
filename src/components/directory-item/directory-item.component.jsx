@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { BackgroundImage, Body, DirectoryItemContainer } from './directory-item.style';
