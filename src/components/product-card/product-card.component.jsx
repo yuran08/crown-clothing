@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <ProductCartContainer key={id}>
-      <img src={imageUrl} alt="product photo" />
+      <img src={imageUrl} alt={`${name}`} />
       <Button children="Add To Car" buttonType={BUTTON_TYPE_CLASSES.inverted} onClick={addProductToCart} />
       <Footer>
         <Name>{name}</Name>

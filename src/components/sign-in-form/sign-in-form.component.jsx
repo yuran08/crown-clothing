@@ -59,8 +59,8 @@ const SignInForm = () => {
 
       if (error.code === "auth/wrong-password") {
         alert("incorrect password for email");
-      } else if (error.code = "auth/uesr-not-found") {
-
+      } else if (error.code === "auth/uesr-not-found") {
+        alert('no user associated with this email');
       }
     }
   }
